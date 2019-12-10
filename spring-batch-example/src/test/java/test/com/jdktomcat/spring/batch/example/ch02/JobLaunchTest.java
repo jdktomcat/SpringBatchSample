@@ -16,12 +16,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={
-"/ch02/job/job.xml"
+    "classpath:/ch02/job/job.xml"
 })
 public class JobLaunchTest {
+
 	@Autowired
 	private JobLauncher jobLauncher;
-	@Autowired@Qualifier("billJob")
+
+	@Autowired
+    @Qualifier("billJob")
 	private Job job;
 
 	@Before

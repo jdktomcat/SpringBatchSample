@@ -1,6 +1,3 @@
-/**
- * 
- */
 package test.com.jdktomcat.spring.batch.example.ch02;
 
 import org.springframework.batch.core.Job;
@@ -18,7 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class JobLaunch {
 	
 	/**
-	 * @param args
+	 * @param args 参数
 	 */
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("ch02/job/job.xml");
