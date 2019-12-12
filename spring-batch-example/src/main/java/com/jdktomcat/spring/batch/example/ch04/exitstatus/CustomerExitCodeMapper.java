@@ -15,7 +15,8 @@ public class CustomerExitCodeMapper implements ExitCodeMapper {
 	/* (non-Javadoc)
 	 * @see org.springframework.batch.core.launch.support.ExitCodeMapper#intValue(java.lang.String)
 	 */
-	public int intValue(String exitCode) {
+	@Override
+    public int intValue(String exitCode) {
 		if (ExitStatus.COMPLETED.getExitCode().equals(exitCode)) {
 			return 1;
 		} else if (ExitStatus.FAILED.getExitCode().equals(exitCode)) {

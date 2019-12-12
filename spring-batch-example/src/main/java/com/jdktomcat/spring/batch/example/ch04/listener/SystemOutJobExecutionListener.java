@@ -15,7 +15,8 @@ public class SystemOutJobExecutionListener implements JobExecutionListener {
 	/* (non-Javadoc)
 	 * @see org.springframework.batch.core.JobExecutionListener#beforeJob(org.springframework.batch.core.JobExecution)
 	 */
-	public void beforeJob(JobExecution jobExecution) {
+	@Override
+    public void beforeJob(JobExecution jobExecution) {
 		System.out.println("JobExecution creat time:" + jobExecution.getCreateTime());
 //		throw new RuntimeException("listener make error!");
 	}
@@ -23,7 +24,8 @@ public class SystemOutJobExecutionListener implements JobExecutionListener {
 	/* (non-Javadoc)
 	 * @see org.springframework.batch.core.JobExecutionListener#afterJob(org.springframework.batch.core.JobExecution)
 	 */
-	public void afterJob(JobExecution jobExecution) {
+	@Override
+    public void afterJob(JobExecution jobExecution) {
 		System.out.println("Job execute state:" + jobExecution.getStatus().toString());
 	}
 
